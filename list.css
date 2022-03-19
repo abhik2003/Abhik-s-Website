@@ -1,0 +1,22 @@
+ul{
+    list-style-type: georgian;
+    list-style-type: square;
+    list-style-type: disc;
+    list-style-type: circle;
+    list-style-position: inside;
+}
+li{
+    /* border: 1px solid rgb(255, 212, 92);
+    border-radius: 3px; */
+}
+ol{
+    list-style-type: lower-greek;
+    list-style-type: lower-alpha;
+}
+.navigation{
+    display: inline-block;
+    padding: 10px;
+}
+nav{
+    background-color: rgb(227, 245, 129);
+}

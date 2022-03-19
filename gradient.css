@@ -1,0 +1,47 @@
+*{
+    /* margin: 0; */
+    padding: 0;
+
+}
+caption{
+    font-size: 30px;
+    background-image: linear-gradient(rgb(235, 250, 101),white,rgb(235, 250, 101));
+    border:2px solid black;
+    border-bottom: 0;
+}
+table{
+    border:2px solid black;
+    /* border-collapse: collapse; */
+}
+td{
+    border: 1.5px solid black;
+    height: 33vh;
+    width: 49vw;
+    padding-left: 1vw;
+}
+
+.div1{
+    background-image: linear-gradient(blue,red);
+
+}
+.div2{
+    background-image: linear-gradient(violet,indigo,blue,green,yellow,orange,red);
+}
+.div3{
+    background-image: linear-gradient(to right, white,green);
+}
+.div4{
+    background-image: linear-gradient(to top left, white,rgb(241, 52, 232));
+}
+.div5{
+    background-image: linear-gradient(135deg,white,rgb(224, 202, 0));
+}
+.div6{
+    background-image: linear-gradient(45deg,white,rgb(15, 227, 255));
+}
+.div7{
+    background-image: radial-gradient(orange,white,green);
+}
+.div8{
+    background-image: radial-gradient(circle,orange ,white ,green);
+}

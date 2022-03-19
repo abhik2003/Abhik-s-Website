@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Basics</title>
+    <link rel="stylesheet" href="cssbasic.css" />
+  </head>
+  <style>
+    #head {
+      background-color: blue;
+      color: brown;
+      padding-left: 10px;
+    }
+  </style>
+  <body>
+    <div id="head" style="background-color: rgb(186, 240, 240)">
+      <h1 style="padding-top: 10px">
+        This is Head
+      </h1>
+      <p>
+        This is a para under <b>'head'</b> id. And background color is
+        <b>aqua</b> due to inline css.<b>Not blue</b> due to &ltstyle&gt tag.And
+        color is <b>brown </b>due to <code class="htmltag">&ltstyle&gt</code> not
+        black due to external CSS
+      </p>
+      <p>
+        So from here it is proved that priority of CSS is follloeing:
+      </p>
+      <ol>
+        <li>Inline CSS</li>
+        <li><code class="htmltag">&ltstyle&gt</code> tag CSS</li>
+        <li>External CSS</li>
+      </ol>
+    </div>
+    <hr noshade="" size="4px" color="black" />
+    <div>
+      <aside class="aside">
+        <p>This is aside</p>
+      </aside>
+      <div class="red">
+        <article>
+          <p>
+            background-color: red; color:white;(in css last color is applied
+            ****SEE THE CODE FOR UNDERSTANDING) background-color: red;
+            color:white; background-color: red; color:white; background-color:
+            red; color:white;
+          </p>
+        </article>
+      </div>
+    </div>
+    <hr noshade="" size="4px" color="black" />
+    <div class="one">
+      <p>This para belongs to class "one".</p>
+    </div>
+    <div class="one">
+      <p>This is an another para belonging to the class "one".</p>
+    </div>
+    <div class="one">
+      <p>
+        <em
+          >So from this it is found that
+          <b>class css works on multiple elements.</b></em
+        >
+      </p>
+    </div>
+    <hr noshade="" size="4px" color="black" />
+    <div>
+      <p class="class1 class2 class3">
+        This para belong to three classes<b>(class1,class2,class3)</b>
+      </p>
+      <p class="class1">This para belongs to only class1(color:red)</p>
+      <p class="class2">
+        This para only belongs to class2(background-color:sky blue)
+      </p>
+      <p class="class3">This para only belongs to class3(font size:30px)</p>
+    </div>
+    <hr noshade="" size="1px" color="black" />
+    <div style="text-align: right;padding: 14px">
+      <a href="gradient.html"><button style="background-color: rgb(255, 230, 230);color: darkgreen;border: 1.3px solid black;border-radius: 3px;">Next <span>&gt</span></button></a>
+    </div>
+  </body>
+</html>
