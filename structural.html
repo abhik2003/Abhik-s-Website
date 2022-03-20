@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Structural pseudo Class</title>
+</head>
+<style>
+    li:first-child{
+        border: 1px solid red;
+    }
+    p:first-of-type{
+        border: 2px solid blue;
+    }
+    li:nth-last-child(3){
+        background-color: chartreuse;
+    }
+    li:nth-child(3n+2){
+        border: 1px solid black;
+    }
+    p:nth-last-of-type(2){
+        background-color: rgb(255, 169, 169);
+    }
+    p:nth-of-type(3){
+        background-color: cyan;
+    }
+    #p1::first-line{
+        color: darkgreen;
+        font-weight: 800;
+        font-size: large;
+    }
+    #head1:after{
+        content: " This is after pseoudoclass";
+        font-weight: 100;
+
+    }
+    p.note:before{
+        content: "NOTE: ";
+    }
+    p.note{
+        background-color: darkseagreen;
+        border: 2px solid blue;
+    }
+</style>
+<body>
+    <h1 style="text-align: center;padding: 0px;margin: 0;">Structural Pseudo Class</h1>
+    <hr nonshade="nonshade" size="3" color="black" >
+    <p id="p1"style="padding: 4px; text-align: justify;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto, quidem. Impedit nemo consequuntur soluta provident cumque aliquid, mollitia facere magni quae corporis expedita sapiente! Illum nobis excepturi neque error. Aperiam illum perferendis qui corrupti eos pariatur, vel sunt, cumque numquam beatae necessitatibus excepturi error labore, explicabo atque illo sapiente saepe? Nihil, minima consequatur pariatur officia deleniti dolor voluptates exercitationem unde, quidem molestiae id repudiandae necessitatibus natus quas suscipit dolorum facilis nulla quam. Necessitatibus laborum deserunt laudantium? Delectus placeat odit officia?</p>
+    <ul>
+        <li>Link 1</li>
+        <li>Link 2</li>
+        <li>Link 3</li>
+        <li>Link 4</li>
+        <li>Link 5</li>
+        <li>Link x</li>
+        <li>Link x</li>
+        <li>Link x</li>
+        <li>Link x</li>
+        <li>Link x</li>
+    </ul>
+    <br>
+    <h1 style="text-align: center;"id="head1">This is heading</h1>
+    <p>
+        <p>Child Paragraph</p>
+        <p>Child Paragraph</p>
+        <p>Child Paragraph</p>
+        <p>Child Paragraph</p>
+        <p>Child Paragraph</p>
+    </p>
+    <p style="padding: 5px;text-align: justify;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto ipsum deserunt quod vel quidem laboriosam similique sed impedit, hic fugiat repudiandae rerum quasi minima, aspernatur excepturi, reprehenderit pariatur quisquam sit!</p>
+    <br>
+    <p class="note" style="padding: 5px;">Pseodo Class is very easy.</p>
+    <div style="text-align: center;padding: 14px;margin-top:5em;margin-bottom: 10em;">
+        <a href="target.html"><button style="background-color: rgb(255, 230, 230);color: darkgreen;border: 1.3px solid black;border-radius: 3px;"> <span>&lt </span>Prev</button></a>
+        <a href="" style="padding-left: 60vw;"><button style="background-color: rgb(255, 230, 230);color: darkgreen;border: 1.3px solid black;border-radius: 3px;">Next <span>&gt</span></button></a>
+      </div>
+</body>
+</html>

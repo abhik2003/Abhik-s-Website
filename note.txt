@@ -1,0 +1,23 @@
+﻿CSS Functions:
+1. calc() ---> calc(100%-200px)
+2. :root{
+	--primary-color: ;
+	--btn-color: ;
+	--text--color: :
+    }
+    selector{
+     bg-color: var(--primary-color);
+	}
+
+Box Sizing:
+box-sizing:
+color: inherit,initial;
+Image:
+object-fit: ;
+		contain,
+		fill;
+		cover;
+object-position: ;
+		top center;
+		top left;
+

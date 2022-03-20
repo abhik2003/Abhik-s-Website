@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Target pseudo Class</title>
+</head>
+<style>
+    *{
+        margin-left: 10px ;
+        /* padding: 5px; */
+        /* padding-left: 10px; */
+    }
+    #div1{
+        width: 473px;
+    }
+    ul,div>div{
+        margin-bottom: 40px;
+    }
+    li{
+        list-style-type: none;
+        padding-top: 2px;
+        padding-bottom: 2px;
+    }
+    div>div p::first-line{
+        font-variant: small-caps;
+        font-size: large;
+    }
+    div:target{
+        background-color: rgb(152, 255, 221);
+        color: maroon;
+        /* background: ; */
+        border: 2px solid rgb(238, 115, 115);
+        border-radius: 5px;
+    }
+    #b1:target{
+        background-color: rgb(230, 137, 238);
+        color: black;
+    }
+</style>
+<body>
+    <h1 style="text-align: center; color: rgb(95, 73, 0);">TARGET PSEUDO CLASS</h1>
+    <hr nonshade="nonshade" size="3px" color="rgb(95, 73, 0)" >
+    <div id="div1">
+        <ul>
+            <li> <a href="#b1">Block 1</a></li>
+            <li> <a href="#b2">Block 2</a></li>
+            <li> <a href="#b3">Block 3</a></li>
+            <li> <a href="#b4">Block 4</a></li>
+        </ul>
+        <div id="b1">
+            <p>Paragraph 1 Paragraph 1 Paragraph 1 Paragraph 1 Paragraph 1 Paragraph 2 Paragraph 2 Paragraph 2 Paragraph 2 Paragraph 2</p>
+        </div>
+        <div id="b2">
+            <p>Paragraph 1 Paragraph 1 Paragraph 1 Paragraph 1 Paragraph 1 Paragraph 2 Paragraph 2 Paragraph 2 Paragraph 2 Paragraph 2</p>
+        </div>
+        <div id="b3">
+            <p>Paragraph 1 Paragraph 1 Paragraph 1 Paragraph 1 Paragraph 1Paragraph 2 Paragraph 2 Paragraph 2 Paragraph 2 Paragraph 2</p>
+        </div>
+        <div id="b4">
+            <p>Paragraph 1 Paragraph 1 Paragraph 1 Paragraph 1 Paragraph 1 Paragraph 2 Paragraph 2 Paragraph 2 Paragraph 2 Paragraph 2</p>
+        </div>
+    </div>
+    <div style="text-align: center;padding: 14px ;;margin-top:5em;margin-bottom: 10em;">
+        <a href="dynamicps1.html"><button style="background-color: rgb(255, 230, 230);color: darkgreen;border: 1.3px solid black;border-radius: 3px;"> <span>&lt </span>Prev</button></a>
+        <a href="structural.html" style="padding-left: 60vw;"><button style="background-color: rgb(255, 230, 230);color: darkgreen;border: 1.3px solid black;border-radius: 3px;">Next <span>&gt</span></button></a>
+      </div>
+</body>
+</html>
