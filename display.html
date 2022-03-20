@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display</title>
+</head>
+<style>
+    body{
+        margin: 10px;
+        border: 1px solid black;
+        padding: 8px;
+    }
+    p.para1{
+        display: inline;
+    }
+    span.span1{
+        display: block;
+    }
+    li>a{
+        background-color: rgb(228, 248, 113);
+        text-align: center;
+        text-decoration: none;
+        border: 1.7px solid blue;
+        padding: 2.5px;
+        border-radius: 10px;
+        width: 100px;
+        display: block;
+    }
+    ol{
+        list-style-type: none;
+    }
+    li{
+        padding: 0 10px;
+        padding-bottom: 10px;
+        float: left;
+    }
+    div:target{
+        border: 1px solid black;
+        border-radius: 10px;
+        background-color: rgba(224, 178, 245, 0.521);
+        padding: 5px;
+    }
+    button{
+        margin-left: 10px;
+        margin-bottom: 4px;
+    }
+    h2{
+        color: rgb(58, 3, 3);
+        margin-top: 3px;
+        margin-bottom: 3px;
+    }
+</style>
+<body>
+    <div class="div1">
+        <h1>Display Property</h1>
+        <ol>
+            <li><a href="#div2">inline</a></li>
+            <li><a href="#div3">block</a></li>
+            <li><a href="#div4">none</a></li>
+            <li><a href="">inline-block</a></li>
+        </ol>
+    </div><div style="height: 40px;"></div>
+    <div id="div2">
+        <h2>inline:</h2>
+        <p class="para1">This is a para . By default para is block.</p>
+        <p class="para1">This is another para.But due to <i><b>inline</b></i> proprty this is inline.</p>
+    </div>
+    <div id="div3">
+        <h2>block:</h2>
+        <span class="span1">This is span.</span>
+        <span class="span1">This is also a span. Due to <i><b>block</b></i> property this is block.</span>
+    </div>
+    <div id="div4">
+        <h2>none:</h2>
+        <p id="para2" style="font-size: 20px;">Hello World!!!</p>
+        <p> To make display none "Hello World" click the button </p>
+        <button onclick="document.getElementById('para2').style.display='none';">CLICK</button>
+        <p> To make display default "Hello World" click the button </p>
+        <button onclick="document.getElementById('para2').style.display='inherit';">CLICK</button>
+    </div>
+    <div style="text-align: center;padding: 14px;margin-top:5em;margin-bottom: 10em;">
+        <a href="structural.html"><button style="background-color: rgb(255, 230, 230);color: darkgreen;border: 1.3px solid black;border-radius: 3px;"> <span>&lt </span>Prev</button></a>
+        <a href="" style="padding-left: 60vw;"><button style="background-color: rgb(255, 230, 230);color: darkgreen;border: 1.3px solid black;border-radius: 3px;">Next <span>&gt</span></button></a>
+      </div>
+</body>
+</html>
