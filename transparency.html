@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transperancy and Transition</title>
+</head>
+<link rel="stylesheet" href="universal.css">
+<style>
+    body{
+        margin: 0px;
+        padding: 30px;
+    }
+    div.image{
+        border: 1px solid black;
+        border-radius: 10px;
+        width: 90vw;
+        box-sizing: border-box;
+        padding: 10px;
+        text-align: justify;        
+    }
+    div>img{
+        opacity: 0.5;
+        border-radius: 15px;
+        margin: 20px;
+    }
+    .imgx{
+        width: 25%;
+        transition-property:all;
+        transition-duration: 600ms;
+    }
+    .image>img:hover{
+        opacity: 1;
+        box-shadow: 0 0 20px rgb(7, 21, 100);
+        width: 30%;
+    }
+</style>
+<body>
+    <div>
+        <h1>Transparency  Changing With Mouse Movement</h1>
+        <hr>
+        <h2>Move Your Cursor To See Any Image Clearly</h2>
+    </div>
+    <div class="image">
+        <img src="image/img1.jpg" alt="image1" class="imgx">
+        <img src="image/img2.jpg" alt="image2" class="imgx">
+        <img src="image/img3.jpg" alt="image3" class="imgx">
+        <img src="image/img4.jpg" alt="image4" class="imgx">
+        <img src="image/img5.jpg" alt="image5" class="imgx">
+        <img src="image/img6.jpg" alt="image6" class="imgx">
+        <img src="image/img7.jpg" alt="image7" class="imgx">
+        <img src="image/img8.jpg" alt="image8" class="imgx">
+        
+    </div>
+    <div class="last" style="padding: 30px 50px;">
+        <button style=" float: left;"><a href="display.html">&lt Prev</a></button>
+        <button style="float: right;"><a href="transperantbox.html">Next &gt</a></button>
+        <div style="height: 100px;"></div>
+    </div>
+</body>
+</html>

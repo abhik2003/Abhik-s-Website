@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transformation</title>
+</head>
+<link rel="stylesheet" href="universal.css">
+<style>
+    body{
+        margin: auto;
+    }
+    div{
+        margin: auto;
+    }
+    img{
+        width: 300px;
+        margin-left: 30%;
+        margin-bottom: 100px;
+    }
+    .transform{
+        transition-duration: 1s;
+    }
+    #transform1:hover{
+        transform: scale(1.5);
+    }
+    #transform2:hover{
+        transform: rotate(-30deg);
+        box-shadow: 8px 8px  20px black;
+    }
+    #transform3:hover{
+        transform: translate(300px,200px);
+    }
+    #transform4{
+        opacity: 0.7;
+    }
+    #transform4:hover{
+        transform: rotate(-30deg);
+        box-shadow: 0 0 40px black;
+        width: 400px;
+        opacity: 1;
+        border-radius: 25px;
+    }
+    h1,p{
+        text-align: center;
+    }
+</style>
+<body>
+    <h1>TRANSFORMATION</h1>
+    <hr nonshade="nonshade" sixe="2px" color="black">
+    <p> To See Transformation Move Your Cursor on Different Images</p>
+    <div>
+        <img src="image/img1.jpg" alt="image1" id="transform1" class="transform">
+    </div>
+    <div>
+        <img src="image/img2.jpg" alt="image2" id="transform2" class="transform">
+    </div>
+    <div>
+        <img src="image/img3.jpg" alt="image3" id="transform3" class="transform">
+    </div>
+    <div>
+        <img src="image/img4.jpg" alt="image4" id="transform4" class="transform">
+    </div>
+    <div class="last" style="padding: 30px 50px;">
+        <button style=" float: left;"><a href="transition.html">&lt Prev</a></button>
+        <button style="float: right;"><a href="">Next &gt</a></button>
+        <div style="height: 100px;"></div>
+    </div>
+</body>
+</html>
