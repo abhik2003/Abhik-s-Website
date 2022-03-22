@@ -16,7 +16,37 @@
         Transition
     </h1>
     <hr noshade="nonshade" size="2px" color="black">
-    <table>
+    <div class="button">
+        <button id="button1" onclick="document.getElementById('single').style.display='none';document.getElementById('multiple').style.display='block';document.getElementById('button2').style.display='block';document.getElementById('button1').style.display='none'">MULTIPLE LINE</button>
+        
+        <button id="button2" onclick="document.getElementById('multiple').style.display='none' ;document.getElementById('button1').style.display='inherit';document.getElementById('single').style.display='block';document.getElementById('button2').style.display='none'">SINGLE LINE</button>
+    </div>
+        <br>
+        <table id="single">
+        <tr>
+            <td id="animate1" class="animate"></td>
+            <td id="animate2" class="animate"></td>
+            <td id="animate3" class="animate"></td>
+            <td id="animate4" class="animate"></td>
+            <td id="animate5" class="animate"></td>
+            <td id="animate1" class="animate"></td>
+            <td id="animate2" class="animate"></td>
+            <td id="animate3" class="animate"></td>
+            <td id="animate4" class="animate"></td>
+            <td id="animate5" class="animate"></td>
+            <td id="animate1" class="animate"></td>
+            <td id="animate2" class="animate"></td>
+            <td id="animate3" class="animate"></td>
+            <td id="animate4" class="animate"></td>
+            <td id="animate5" class="animate"></td>
+            <td id="animate1" class="animate"></td>
+            <td id="animate2" class="animate"></td>
+            <td id="animate3" class="animate"></td>
+            <td id="animate4" class="animate"></td>
+            <td id="animate5" class="animate"></td>
+        </tr>        
+    </table>
+    <table id="multiple" style="display: none;">
         <tr>
             <td id="animate1" class="animate"></td>
             <td id="animate2" class="animate"></td>
@@ -238,6 +268,10 @@
             <td id="animate1" class="animate"></td>
         </tr>
     </table>
-
+    <div class="last" style="padding: 30px 50px;">
+        <button style=" float: left;"><a href="transformation.html">&lt Prev</a></button>
+        <button style="float: right;"><a href="animation2.html">Next &gt</a></button>
+        <div style="height: 100px;"></div>
+    </div>
 </body>
 </html>
