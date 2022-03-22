@@ -1,0 +1,36 @@
+.animate2{
+    color: wheat;
+    font-weight: 900;
+    animation-name: textanimation;
+    animation-duration: 15s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    display: inline-block;
+    width:auto;
+    float: right;
+    position: relative;
+    left:90vw;
+}
+/* .animate3{
+    animation-name: textanimation2;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    display: inline-block;
+    width: 40vw;
+} */
+@keyframes textanimation{
+    0%{transform: translateX(0);}
+    100%{transform: translateX(-190vw);}
+
+}
+/* @keyframes textanimation2{
+    0%{transform: translateX(100%);}
+    100%{transform: translateX(0%);}
+
+} */
+#divanim{
+    border: 2px solid blue; 
+    overflow: hidden;
+    background-color: rgb(255, 0, 0);
+}
