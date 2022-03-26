@@ -72,26 +72,40 @@
     <script>
         let cel=document.getElementById("ip1");
         let far=document.getElementById("ip2");
+        let i;
         cel.addEventListener('input',
         function(){
             let c=cel.value;
             let f=9*c/5+32;
             if(!Number.isInteger(f))
             {
-                f=f.toFixed(1);
+                for(i=10;i>=0;i--)
+                {
+                    if(f.toFixed(i)-f.toFixed(i-1)!=0)
+                        {
+                            f=f.toFixed(i);
+                            break;
+                        }    
+                }     
             }
             far.value=f;
-            console.log(f);
-        })
+        });
         far.addEventListener('input',
         function(){
             let f=far.value;
             let c=(f-32)*5/9;
             if(!Number.isInteger(c))
             {
-                c=c.toFixed(4);
-            }
-            cel.value=c;
+                for(i=10;i>=0;i--)
+                {
+                    if(c.toFixed(i)-c.toFixed(i-1)!=0)
+                        {
+                            c=c.toFixed(i);
+                            break;
+                        }    
+                }     
+            }    
+                cel.value=c;
         })
     </script>
 </body>
