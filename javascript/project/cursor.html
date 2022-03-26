@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #div1{
+        position: absolute;
+        left: 0px;
+        right: 0px;
+        width: 16px;
+        height: 16px;
+        border-radius: 50%;
+        background-image: radial-gradient(rgba(243, 82, 7, 0.841),rgba(255, 251, 0, 0.582),green);
+        box-shadow: 0 0 15px black;
+    }
+    body{
+        background: rgb(156, 255, 225);
+    }
+</style>
+<body>
+    <script>
+        var px=0,py=0;
+        document.onmousemove=function(event)
+        {
+            px=event.pageX;
+            py=event.pageY;
+            px-=8;
+            py-=8;
+            document.getElementById("div1").style.left=px+"px";
+            document.getElementById("div1").style.top=py+"px";
+        }
+    </script>
+    <div id="div1"></div>
+</body>
+</html>
