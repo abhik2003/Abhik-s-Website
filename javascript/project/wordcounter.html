@@ -1,0 +1,51 @@
+<!DOCTYPE HTML>
+<HEAD>
+<TITLE>Form with Sting Object</TITLE>
+</HEAD>
+<style>
+    textarea{
+        color:rgb(252, 0, 42);
+        background-image: linear-gradient(rgba(4, 250, 45, 0.445),rgb(0, 132, 255));
+        font-size: larger;
+        box-shadow: -1px 3px 25px rgb(110, 4, 4);
+        border-radius: 10px;
+        margin-bottom: 20px;
+        text-align: justify;
+        padding: 10PX;
+        width: 80vw;
+        height: 40vh;
+    }
+    #wcount{
+        font-size:15px;background-color: rgb(255, 189, 6); border-radius: 8px;
+        box-shadow: 0 0 5px black;
+        text-align: center;
+        cursor: pointer;
+    }
+</style>
+<BODY style="background-color:rgba(252, 148, 11, 0.22);text-align: center;">
+<H1>Enter your text in the given text area</H1>
+<FORM name="wordcount">
+<TEXTAREA rows="12" name="wordcount2" cols="36" wrap="virtual" id="textarea";></textarea><br>
+<INPUT type="text" name="wordcount3" size="32" id="wcount">
+</FORM>
+<SCRIPT type="text/javascript">
+let textbox=document.getElementById("textarea");
+textbox.addEventListener('input',
+function countit(){
+var formcontent=document.wordcount.wordcount2.value;
+var len=formcontent.length;
+formcontent= formcontent.trim();
+formcontent=formcontent.split(" ");
+var i,count=0;
+for(i=0;i<formcontent.length;i++)
+{
+    if(formcontent[i]=="")
+    count++;
+}
+var word=formcontent.length-count;
+var ans =' Word Count = '+word+ ' Character Count= '+len;
+document.wordcount.wordcount3.value=ans;
+});
+</SCRIPT>
+</BODY>
+</HTML>
