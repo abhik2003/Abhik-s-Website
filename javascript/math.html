@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math Objects</title>
+</head>
+<body>
+    <div>
+        <h1>Random Number</h1>
+        <div id="random"></div>
+        <div id="random2"></div>
+    </div>
+    <script>
+        function random_num_gen(){
+        let random_num=document.getElementById("random");
+        var x=Math.random();
+        random_num.innerHTML="1) "+x+"<br>";
+        let max=1000,min=50;
+        var y=Math.floor(Math.random()*(max-min+1)+min);
+        let random_num2=document.getElementById("random2");
+        random_num2.innerHTML="2) "+y+"<br>";
+        };
+        setInterval(random_num_gen,500);
+    </script>
+</body>
+</html>

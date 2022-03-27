@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #bob{
+        position: relative;
+        left: -8.5px;
+        top:246px;
+        width: 20px;
+        height: 20px;
+        border-radius: 10px;
+        background-color: black;
+
+    }
+    #pendulam {
+            height: 250px;
+            width: 2px;
+            background-color: rgb(255, 2, 2);
+            position: relative;
+            left: 50vw;
+            transform-origin: 50% 0%;
+            padding: 0;
+     }
+    #line{
+        position: relative;
+        left:0px;
+        top: 1px;
+        width: 95vw;
+        height: 6px;
+        background-image: linear-gradient(rgba(0, 0, 0, 0),rgba(10, 10, 10, 0.185),rgba(66, 20, 20, .9)); margin: auto;
+    }    
+</style>
+<body>
+    <div style="text-align: center;">
+        <h1 style="margin-bottom: 5px;">
+            Pendulum
+        </h1>
+        <canvas id="" width="100vw" height="1px" style="border: 0">
+        </canvas>
+        <div id="line"></div>
+        <div id="pendulam">
+            <div id="bob"></div>
+        </div>
+    </div>
+    <script>
+        var t=0;
+        var x;
+        function shm(){
+            var s=Math.sin(t);
+            x=s*15;
+            var y=x+"px"
+            console.log(x);
+            let z=x+"px"
+            let temp=t*10;
+            let temp2=temp+"px";
+            document.querySelector('#pendulam').style.transform
+                       = 'rotate('+x+'deg)';
+            t+=0.005;
+        }      
+        setInterval(shm,1);
+    </script>
+</body>
+</html>
