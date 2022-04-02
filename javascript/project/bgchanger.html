@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #para{
+        position: absolute;
+        border: 2px solid red;
+        margin: 5px;
+        padding: 40px 50px;
+        text-align: justify;
+    }
+    .btn{
+        border: 1px solid gray;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        margin: 0px 5px;
+    }
+    #white{
+    background-color: white;        
+    }
+    #black{
+        background-color:black ;
+    }
+    #yellow{
+        background-color: yellow;
+    }
+    #green{
+        background-color: green;
+    }
+    h1{
+        text-align: center;
+    }
+</style>
+<body>
+    <h1>
+        Background Colour Changer
+    </h1>
+    <div style="text-align: right;">   
+        <span><button class="btn" id="white" value=""></button></span>
+        <span><button class="btn" id="black" value=""></button></span>
+        <span><button class="btn" id="yellow" value=""></button></span>
+        <span><button class="btn" id="green" value=""></button></span>
+    </div>
+    <p id="para">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro tempore consectetur sed praesentium mollitia, culpa earum doloribus itaque quaerat sapiente quas modi est necessitatibus officia in accusantium sequi nemo corrupti dolorem repellat! Aut facilis voluptates enim doloremque iusto unde veritatis architecto, nulla in culpa molestias autem earum cum natus officiis rem placeat. Sit modi tempora vero ducimus animi odio ipsum molestiae aliquid corporis maxime suscipit aperiam commodi cupiditate cumque laudantium perspiciatis consequatur fugiat veniam in consequuntur sed dicta nesciunt, ad quae? Provident voluptas asperiores est facilis iure repellat ipsam dicta ea officiis, debitis voluptate soluta nihil rem voluptatibus quo quis architecto animi doloremque hic, mollitia placeat ut aliquam. Dolores nihil alias, fugiat omnis minus itaque natus ab impedit, molestiae atque sit deserunt, quaerat amet quasi. Necessitatibus mollitia, quia tempore dolorum maxime deleniti aspernatur quo iusto similique dignissimos quod nemo consectetur cumque beatae nobis odio sint recusandae, facere amet. Quas nemo aut dicta reiciendis non sapiente excepturi, aperiam natus labore repellendus, atque soluta libero eum ut totam architecto, temporibus at porro laborum. Aliquam magni, molestias maiores nemo vero fuga necessitatibus, quibusdam, architecto cupiditate dolorum distinctio aspernatur ea cumque quidem ut fugiat saepe aliquid perspiciatis. Ipsum nobis, in a esse beatae voluptatum cum laboriosam molestias quod temporibus quisquam delectus veritatis tenetur ex tempora enim error alias praesentium. Ipsa, natus! Obcaecati corrupti debitis, eius dolores nihil esse quaerat totam, dolorem veritatis dignissimos, eveniet natus et! Dignissimos tempore commodi pariatur totam, enim ducimus aliquid laudantium est, odit nulla, saepe ullam placeat vero ratione sunt excepturi necessitatibus assumenda perferendis doloremque. Obcaecati ullam neque, aperiam maiores minus laboriosam cum possimus fuga voluptates amet dolore explicabo dignissimos consectetur repudiandae? Accusantium dicta autem est modi beatae ea, fugit error animi. Fuga pariatur tenetur nesciunt dignissimos delectus dolores, quidem corrupti unde architecto magnam! Repellendus quis consequatur necessitatibus odit repudiandae accusantium, fugiat nulla ut fuga quod amet iusto molestiae voluptatem nobis quaerat, accusamus cum neque aspernatur sit voluptatum mollitia numquam veritatis. Enim sequi explicabo sapiente dignissimos sint minima dolorem harum fugit inventore pariatur eveniet, beatae cumque sunt placeat nisi praesentium cum et libero labore quaerat nemo molestias nulla distinctio. Quia alias ratione non accusamus dolorum vero assumenda amet rerum nobis nostrum doloremque, eius, officia illo ut. Dicta, ex ullam. Beatae, debitis doloribus laborum quaerat voluptatem neque hic. Quo dolor cum ea veniam vel distinctio ducimus quisquam iure inventore sit eligendi aliquam dolorum enim quaerat eos, autem quod velit incidunt labore earum corrupti eaque natus? Ea quam quasi nihil possimus mollitia ipsum hic odio similique error placeat, quo ipsa totam fugit saepe facere ad ex veritatis. Sint voluptate error nihil quam rerum autem, tempora suscipit in qui, ab quia esse distinctio ut debitis magnam dolorum aspernatur, neque aut earum! Rerum incidunt soluta vel repudiandae temporibus atque est illo molestias, corrupti maxime cum neque nesciunt mollitia inventore reprehenderit voluptatibus deleniti sequi consequatur natus unde alias saepe rem. Adipisci sapiente vero sequi, odio consectetur iusto reiciendis, numquam laboriosam assumenda, tenetur excepturi obcaecati. Fuga odio obcaecati, soluta neque incidunt beatae ab unde quo eum!
+    </p>
+</body>
+<script>
+    let white=document.getElementById('white');
+    let black=document.getElementById('black');
+    let yellow=document.getElementById('yellow');
+    let green=document.getElementById('green');
+    white.addEventListener('click',function(){
+        document.body.style.backgroundColor='white';
+        document.body.style.color='black';
+    });
+    black.addEventListener('click',function(){
+        document.body.style.backgroundColor='black';
+        document.body.style.color='white';
+    });
+    yellow.addEventListener('click',function(){
+        document.body.style.backgroundColor='yellow';
+        document.body.style.color='black';
+    });
+    green.addEventListener('click',function(){
+        document.body.style.backgroundColor='green';
+        document.body.style.color='white';
+    });   
+</script>
+</html>

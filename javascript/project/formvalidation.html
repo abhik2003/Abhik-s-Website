@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+</head>
+<style>
+    .alert{
+        visibility: hidden;
+        font-size: 13px;
+        color: red;
+        position: relative;
+        margin: 2px 0px 7px 0px;
+        padding: 0px;
+        min-width: 290px;
+    }
+    td{
+        vertical-align: top;
+    }
+    table{
+        border: 2px solid black;
+        padding: 15px;
+        margin: auto;
+        background-color: rgb(93, 191, 249);
+        border-radius: 20px;
+    }
+    #name{
+        padding: 2px 10px;
+        border-radius: 8px;
+    }
+    #password{
+        padding: 2px 10px;
+        border-radius: 8px;
+    }
+    #submit{
+        background-color: greenyellow;
+        border-radius: 10px;
+        padding: 5px;
+    }
+    h1{
+        text-align: center;
+        margin-bottom: 0px;
+    }
+    span{
+        color: red;
+        font-size: 14px;
+    }
+</style>
+<body>
+    <h1>
+        Form Validation
+    </h1>
+    <hr>
+    <form action="formvalidation.html" onsubmit="return checkValidation()">
+        <div class="table-responsive">
+
+        <table>
+            <tr>
+                <td> Name:</td>
+                <td><input type="text" placeholder="Enter Your Username" id="name"><span> *</span><br>
+                    <p class="alert" id="n-alert">Name</p></td>
+            </tr>
+            <tr>
+                <td> Password:</td>
+                <td >
+                    <input type="password" id="password" placeholder="Enter Password"><span> *</span><br>
+                    <p class="alert" id="p-alert">Password</p>
+                    
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" style="text-align: center;"><input type="submit" value="SUBMIT" id="submit"></td>
+            </tr>
+        </table>
+                    
+    </div>
+       
+    </form>
+</body>
+<script>
+    function checkValidation(){
+        var name=document.getElementById('name');
+        var password =document.getElementById('password');
+        var check_name=true;
+        var check_password=true;
+        var n_alert=document.getElementById('n-alert');
+        var p_alert=document.getElementById('p-alert');
+        if(name.value=="")
+        {
+            n_alert.style.visibility='visible';
+            n_alert.innerText="Please Enter Your Username.";
+            check_name=false;
+        }
+        else if(name.value.length<4){
+            n_alert.style.visibility='visible';
+            n_alert.innerText="Username must have atleast 4 characters.";
+            check_name=false;
+        }
+        else if(name.value.length>10){
+            n_alert.style.visibility='visible';
+            n_alert.innerText="Username must have maximum 10 characters.";
+            check_name=false;
+        }
+        else
+            n_alert.style.visibility='hidden';
+        if(password.value=="")
+        {
+            p_alert.style.visibility='visible';
+            p_alert.innerText="Please Enter Your Password";
+            check_password=false;
+        }
+        else if(password.value.length<5){
+            p_alert.style.visibility='visible';
+            p_alert.innerText="Password must have atleast 5 characters.";
+            check_password=false;
+        }
+        else if(password.value.length>10){
+            p_alert.style.visibility='visible';
+            p_alert.innerText="Password must have maximum 10 characters.";
+            check_password=false;
+        }
+        else
+            p_alert.style.visibility='hidden';
+        if(check_name==true && check_password==true)
+            return true;
+        else
+            return false;
+    }
+</script>
+</html>

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        background-color: rgba(16, 48, 11, 0.89);
+        background-image: linear-gradient(rgb(103, 57, 0),rgb(68, 2, 89));
+        color: white;
+        min-height: 100vh;
+    }
+    h1{
+        text-align: center;
+        font-size: 50px;
+    }
+    .value{
+        font-size: 120px;
+    }
+    #timer{
+        text-align: center;
+    }
+    #btn-div{
+        text-align: center;
+    }
+    .btn{
+        margin: 5px 15px;
+        font-size: 25px;
+    }
+    .text{
+        font-size: 25px;
+        font-weight: 800;
+    }
+    .btn{
+        border-radius: 10px;
+        padding: 3px 8px;
+        background-image: linear-gradient(rgb(239, 204, 6),rgb(209, 6, 6));
+        color: aliceblue;
+    }
+    .btn:hover{
+        background-image: linear-gradient(rgb(44, 230, 255),rgb(61, 207, 4));
+        color: rgb(0, 0, 0);
+        box-shadow: 0px 0px  8px rgb(133, 41, 41);
+    }
+    #stop{
+        display: none;
+    }
+</style>
+<body>
+    <h1>STOP WATCH</h1>
+    <div id="timer">
+        <span id="hr" class="value">00</span>
+        <span class="text">Hr</span>
+        <span id="min" class="value">00</span>
+        <span class="text">Min</span>
+        <span id="sec" class="value">00</span>
+        <span class="text">Sec</span>
+        <span id="ms" class="value">00</span>
+    </div>
+    <div id="btn-div">
+        <button class="btn" id="start" onclick="start()">Start</button>
+        <button class="btn" id="stop" onclick="stop()">Stop</button>
+        <button class="btn" id="reset" onclick="reset()">Reset</button>
+    </div>
+</body>
+<script>
+    let hr=0;
+    let min=0;
+    let sec=0;
+    let ms=0;
+    let condition=false;
+    function start(){
+        condition=true;
+        document.getElementById('start').style.display="none";
+        document.getElementById('stop').style.display="inline";
+        stopwatch();
+    };
+    function stop(){
+        condition=false;
+        document.getElementById('stop').style.display="none";
+        document.getElementById('start').style.display="inline";
+    };
+    function reset(){
+        condition=false;
+        hr=0;
+        min=0;
+        sec=0;
+        ms=0;
+        document.getElementById('ms').innerText='00';
+        document.getElementById('sec').innerText='00';
+        document.getElementById('min').innerText='00';
+        document.getElementById('hr').innerText='00';
+    };
+    function stopwatch(){
+        if(condition==true){
+            ms=ms+1;
+        if(ms==100){
+            ms=0;
+            sec=sec+1;
+        }
+        if(sec==60){
+            sec=0;
+            min=min+1;
+        }
+        if(min==60){
+            min=0;
+            hr=hr+1;
+        }
+        if(ms<10)
+            document.getElementById('ms').innerText='0'+ms;
+        else
+            document.getElementById('ms').innerText=ms;    
+        if(sec<10)    
+            document.getElementById('sec').innerText='0'+sec; 
+        else    
+            document.getElementById('sec').innerText=sec;
+        if(min<10)    
+            document.getElementById('min').innerText='0'+min;
+        else
+            document.getElementById('min').innerText=min;
+        if(hr<10)
+            document.getElementById('hr').innerText='0'+hr;  
+        else      
+            document.getElementById('hr').innerText=hr;
+        setTimeout("stopwatch()",10);
+    }
+    };
+</script>
+</html>
